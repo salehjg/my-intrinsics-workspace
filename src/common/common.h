@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <iostream>
 #include "spdlog/spdlog.h"
 
 extern spdlog::logger *logger;

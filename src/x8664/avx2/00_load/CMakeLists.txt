@@ -3,8 +3,8 @@ set(target_name x86_avx2_00_load)
 add_executable(${target_name} "")
 
 target_compile_options(${target_name} PRIVATE
-        $<$<CONFIG:Debug>:-O0 -g>
-        $<$<CONFIG:Release>:-O3 -fno-tree-vectorize>
+        $<$<CONFIG:Debug>:-O0 -g -march=core-avx2>
+        $<$<CONFIG:Release>:-O3 -fno-tree-vectorize -march=core-avx2>
 )
 
 target_sources(${target_name}
